@@ -59,8 +59,8 @@ function render(resume) {
     .join("");
 
   const certificates = (resume.certificates || [])
-    .map((c) => esc([c.name, c.issuer, c.date].filter(Boolean).join(", ")))
-    .join("; ");
+    .map((c) => `<div class="line">${esc([c.name, c.issuer, c.date].filter(Boolean).join(", "))}</div>`)
+    .join("");
 
   const awards = (resume.awards || [])
     .map((a) => esc([a.title, a.awarder].filter(Boolean).join(", ")))
@@ -80,9 +80,8 @@ function render(resume) {
       <div class="item">
         <div class="entry-row">
           <div><strong>${esc(w.name)}</strong> | <em>${esc(w.position)}</em></div>
-          <div class="dates">${esc(dateRange(w.startDate, w.endDate))}</div>
+          <div class="dates">${[esc(w.location), esc(dateRange(w.startDate, w.endDate))].filter(Boolean).join(" | ")}</div>
         </div>
-        ${w.location ? `<div class="location">${esc(w.location)}</div>` : ""}
         ${bullets(w.highlights)}
       </div>`
     )
@@ -108,40 +107,44 @@ function render(resume) {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  @page { size: A4; margin: 0.5in; }
+  @page { size: A4; margin: 0.4in; }
   * { box-sizing: border-box; }
+  h1, h2, p, ul { margin: 0; }
   body {
     font-family: "IBM Plex Serif", Georgia, serif;
     color: #111;
-    font-size: 9.5pt;
-    line-height: 1.3;
+    font-size: 9pt;
+    line-height: 1.22;
     max-width: 7.5in;
     margin: 0 auto;
   }
-  h1 { font-size: 17pt; margin: 0 0 2px; text-align: center; }
-  .label { text-align: center; margin: 0 0 4px; font-size: 9.5pt; color: #333; }
-  .contact { text-align: center; font-size: 8.5pt; margin-bottom: 8px; }
+  h1 { font-size: 15pt; margin: 0 0 1px; text-align: center; }
+  .label { text-align: center; margin: 0 0 3px; font-size: 8.5pt; color: #333; }
+  .contact { text-align: center; font-size: 8pt; margin-bottom: 8px; }
   .contact a { color: #111; text-decoration: none; }
   h2 {
-    font-size: 10pt;
+    font-size: 9.5pt;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     color: ${PRIMARY};
-    margin: 12px 0 5px;
-    padding-bottom: 2px;
+    margin: 7px 0 3px;
+    padding-bottom: 1px;
     border-bottom: 1.5px solid ${PRIMARY};
   }
-  h2:first-of-type { margin-top: 0; }
-  .summary { margin: 0 0 4px; }
+  h2:first-of-type { margin-top: 4px; }
+  .summary { margin: 0 0 3px; }
+  .line { margin: 0 0 2px; }
+  .generated { margin-top: 6px; font-size: 6.5pt; color: #999; text-align: center; }
+  .generated a { color: #999; text-decoration: none; }
   .entry-row { display: flex; justify-content: space-between; gap: 12px; }
-  .location { font-size: 8.5pt; color: #555; margin-bottom: 1px; }
-  .dates { white-space: nowrap; font-size: 8.5pt; color: #333; }
-  ul { margin: 3px 0 6px; padding-left: 18px; list-style: disc; }
-  li { margin-bottom: 2px; }
+  .location { font-size: 8pt; color: #555; }
+  .dates { white-space: nowrap; font-size: 8pt; color: #333; }
+  ul { margin: 2px 0 3px; padding-left: 16px; list-style: disc; }
+  li { margin-bottom: 1px; }
   li::marker { color: ${PRIMARY}; }
-  .item { margin-bottom: 7px; }
-  .skill-row { margin-bottom: 3px; }
+  .item { margin-bottom: 3px; }
+  .skill-row { margin-bottom: 2px; }
 </style>
 </head>
 <body>
@@ -149,7 +152,7 @@ function render(resume) {
   ${b.label ? `<p class="label">${esc(b.label)}</p>` : ""}
   <p class="contact">${contactBits.join(" &nbsp;|&nbsp; ")}</p>
 
-  ${resume.summary ? `${heading("Summary")}<p class="summary">${esc(resume.summary)}</p>` : ""}
+  ${b.summary ? `${heading("Summary")}<p class="summary">${esc(b.summary)}</p>` : ""}
 
   ${coreCompetencies ? `${heading("Core Competencies")}${coreCompetencies}` : ""}
 
@@ -161,11 +164,13 @@ function render(resume) {
 
   ${skills ? `${heading("Skills")}${skills}` : ""}
 
-  ${certificates ? `${heading("Certifications")}<p class="summary">${certificates}</p>` : ""}
+  ${certificates ? `${heading("Certifications")}${certificates}` : ""}
 
   ${awards ? `${heading("Awards")}<p class="summary">${awards}</p>` : ""}
 
   ${languages ? `${heading("Languages")}<p class="summary">${languages}</p>` : ""}
+
+  <p class="generated">Generated ${new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })} &bull; Latest version: <a href="https://github.com/ashishbhatiya18/resume/releases/download/latest/resume.pdf">here</a></p>
 </body>
 </html>`;
 }

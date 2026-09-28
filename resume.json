@@ -21,9 +21,9 @@
         "username": "ashishbhatiya18",
         "url": "https://github.com/ashishbhatiya18"
       }
-    ]
+    ],
+    "summary": "Engineering leader with 13+ years in platform engineering, cloud infrastructure, and large-scale distributed systems across banking, fintech, and enterprise environments. Currently VP - Platform Engineering (Director of Engineering scope) at HDFC Bank, leading standardization across platform products (Kubernetes), messaging systems (Kafka, Pub/Sub, NATS.io), and observability (OTLP) for platforms serving 100M+ customers, managing 20+ direct reports, influencing 250+ engineers, and owning $1-5M annual CAPEX/OPEX budgets."
   },
-  "summary": "Engineering leader with 13+ years in platform engineering, cloud infrastructure, and large-scale distributed systems across banking, fintech, and enterprise environments. Currently VP - Platform Engineering (Director of Engineering scope) at HDFC Bank, leading Kubernetes-based platforms serving 100M+ customers, managing 20+ direct reports, influencing 250+ engineers, and owning $1-5M annual CAPEX/OPEX budgets.",
   "coreCompetencies": [
     "Platform Engineering",
     "Kubernetes",
@@ -34,6 +34,9 @@
     "Architecture Governance",
     "Observability",
     "AI/ML Platforms",
+    "Agentic AI",
+    "Agent Orchestration",
+    "MCP",
     "Data Platforms",
     "Cost Optimization",
     "Stakeholder Management"
@@ -128,17 +131,22 @@
     {
       "name": "Observability & Reliability",
       "level": "4",
-      "keywords": ["OpenTelemetry", "Metrics", "Logs", "Traces", "Prometheus", "SRE Practices"]
+      "keywords": ["OpenTelemetry", "OTLP", "Metrics", "Logs", "Traces", "Prometheus", "SRE Practices"]
     },
     {
       "name": "Data & Streaming Systems",
       "level": "4",
-      "keywords": ["Apache Spark", "Kafka", "SQL", "NoSQL", "BigQuery"]
+      "keywords": ["Apache Spark", "Kafka", "Pub/Sub", "NATS.io", "SQL", "NoSQL", "BigQuery"]
     },
     {
       "name": "AI / ML Platforms",
       "level": "3",
       "keywords": ["Machine Learning Platforms", "ML Pipelines", "Model Deployment", "AI Enablement"]
+    },
+    {
+      "name": "Agentic AI & Developer Tooling",
+      "level": "3",
+      "keywords": ["Agents", "MCP", "A2A", "Agent Gateway", "MCP Gateway", "Agent Orchestration"]
     },
     {
       "name": "Technical Skills",
