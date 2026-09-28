@@ -22,8 +22,10 @@
         "url": "https://github.com/ashishbhatiya18"
       }
     ],
-    "summary": "Engineering leader with 13+ years in platform engineering, cloud infrastructure, and large-scale distributed systems across banking, fintech, and enterprise environments. Currently VP - Platform Engineering (Director of Engineering scope) at HDFC Bank, leading standardization across platform products (Kubernetes), messaging systems (Kafka, Pub/Sub, NATS.io), and observability (OTLP) for platforms serving 100M+ customers, managing 20+ direct reports, influencing 250+ engineers, and owning $1-5M annual CAPEX/OPEX budgets."
+    "summary": "Engineering leader with {{YEARS_EXPERIENCE}}+ years in platform engineering, cloud infrastructure, and large-scale distributed systems across banking, fintech, and enterprise environments. Currently VP - Platform Engineering (Director of Engineering scope) at HDFC Bank, leading standardization across platform products (Kubernetes), messaging systems (Kafka, Pub/Sub, NATS.io), and observability (OTLP) for platforms serving 100M+ customers, managing 20+ direct reports, influencing 250+ engineers, and owning $1-5M annual CAPEX/OPEX budgets."
   },
+  "careerStartDate": "2012-07-01",
+  "latestReleaseUrl": "https://github.com/ashishbhatiya18/resume/releases/download/latest/Ashish_Bhatiya-Resume.pdf",
   "coreCompetencies": [
     "Platform Engineering",
     "Kubernetes",

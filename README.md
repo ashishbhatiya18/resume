@@ -1,10 +1,8 @@
 # Ashish Bhatiya — Resume
 
-Resume content lives in [`resume.json`](resume.json), following the [JSON Resume](https://jsonresume.org) schema. A small local theme (`theme/`) renders it as a two-column (sidebar + main) PDF matching the original CV's design: red accent, IBM Plex Serif, skill-level dots.
+Resume content lives in [`resume.json`](resume.json), following the [JSON Resume](https://jsonresume.org) schema. A small local theme (`theme/`) renders it as a single-column, ATS-friendly PDF matching the original CV's color/typography (red accent, IBM Plex Serif).
 
-Note: this sidebar layout parses worse in ATS keyword scanners than a single-column resume (a known trade-off of two-column designs). Fine for direct human/recruiter review; reconsider if the target application funnels through an ATS first.
-
-**Latest PDF (always up to date):** https://github.com/ashishbhatiya18/resume/releases/download/latest/resume.pdf
+**Latest PDF (always up to date):** https://github.com/ashishbhatiya18/resume/releases/download/latest/Ashish_Bhatiya-Resume.pdf
 
 ## Edit the resume
 
@@ -26,7 +24,7 @@ npm run build:pdf    # resume.html -> resume.pdf (via headless Chrome)
 
 ## CI
 
-`.github/workflows/build.yml` runs on every push/PR: it validates `resume.json` against the JSON Resume schema and builds `resume.pdf`. On every push to `main`, it also republishes `resume.pdf` to the permanent [`latest` GitHub Release](https://github.com/ashishbhatiya18/resume/releases/tag/latest) — a stable, public, no-login-required link. It's also uploaded as a workflow artifact named **resume** on every run (PRs included), though that copy expires after 90 days and requires GitHub login to download.
+`.github/workflows/build.yml` runs on every push/PR: it validates `resume.json` against the JSON Resume schema and builds `resume.pdf`, then renames it to `Ashish_Bhatiya-Resume.pdf`. On every push to `main`, it also republishes that file to the permanent [`latest` GitHub Release](https://github.com/ashishbhatiya18/resume/releases/tag/latest) — a stable, public, no-login-required link. It's also uploaded as a workflow artifact named **Ashish_Bhatiya-Resume** on every run (PRs included), though that copy expires after 90 days and requires GitHub login to download.
 
 ## Repo layout
 

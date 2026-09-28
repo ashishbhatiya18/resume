@@ -39,18 +39,21 @@ jobs:
       - name: Build resume.pdf
         run: npm run build
 
-      - name: Upload resume.pdf artifact
+      - name: Rename output to Ashish_Bhatiya-Resume.pdf
+        run: cp resume.pdf Ashish_Bhatiya-Resume.pdf
+
+      - name: Upload resume artifact
         uses: actions/upload-artifact@v4
         with:
-          name: resume
-          path: resume.pdf
+          name: Ashish_Bhatiya-Resume
+          path: Ashish_Bhatiya-Resume.pdf
           if-no-files-found: error
 
-      - name: Publish resume.pdf as a GitHub Release
+      - name: Publish resume as a GitHub Release
         if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
         uses: softprops/action-gh-release@v2
         with:
           tag_name: latest
           name: Latest resume build
           body: Automatically rebuilt from ${{ github.sha }}. This release is overwritten on every push.
-          files: resume.pdf
+          files: Ashish_Bhatiya-Resume.pdf

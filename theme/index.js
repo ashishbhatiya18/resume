@@ -28,12 +28,21 @@ function bullets(highlights = []) {
   return `<ul>${highlights.map((h) => `<li>${esc(h)}</li>`).join("")}</ul>`;
 }
 
+function yearsSince(dateStr) {
+  const start = new Date(dateStr);
+  const ms = Date.now() - start.getTime();
+  return Math.floor(ms / (365.25 * 24 * 60 * 60 * 1000));
+}
+
 function heading(text) {
   return `<h2>${esc(text)}</h2>`;
 }
 
 function render(resume) {
   const b = resume.basics || {};
+  if (b.summary && resume.careerStartDate) {
+    b.summary = b.summary.replace("{{YEARS_EXPERIENCE}}", String(yearsSince(resume.careerStartDate)));
+  }
   const contactBits = [
     b.email && esc(b.email),
     b.phone && esc(b.phone),
@@ -170,7 +179,7 @@ function render(resume) {
 
   ${languages ? `${heading("Languages")}<p class="summary">${languages}</p>` : ""}
 
-  <p class="generated">Generated ${new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })} &bull; Latest version: <a href="https://github.com/ashishbhatiya18/resume/releases/download/latest/resume.pdf">here</a></p>
+  <p class="generated">Generated ${new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}${resume.latestReleaseUrl ? ` &bull; Latest version: <a href="${esc(resume.latestReleaseUrl)}">here</a>` : ""}</p>
 </body>
 </html>`;
 }
