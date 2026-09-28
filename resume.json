@@ -1,0 +1,172 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/schema.json",
+  "basics": {
+    "name": "Ashish Bhatiya",
+    "label": "VP Platform Engineering | Director / Sr Director Engineering Roles | Kubernetes, Observability, AI/ML Platforms",
+    "email": "ashish@ab18.in",
+    "phone": "+91-9702486064",
+    "url": "https://ab18.in",
+    "location": {
+      "city": "Bengaluru",
+      "countryCode": "IN"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "ashishbhatiya18",
+        "url": "https://www.linkedin.com/in/ashishbhatiya18"
+      },
+      {
+        "network": "GitHub",
+        "username": "ashishbhatiya18",
+        "url": "https://github.com/ashishbhatiya18"
+      }
+    ]
+  },
+  "summary": "Engineering leader with 13+ years in platform engineering, cloud infrastructure, and large-scale distributed systems across banking, fintech, and enterprise environments. Currently VP - Platform Engineering (Director of Engineering scope) at HDFC Bank, leading Kubernetes-based platforms serving 100M+ customers, managing 20+ direct reports, influencing 250+ engineers, and owning $1-5M annual CAPEX/OPEX budgets.",
+  "coreCompetencies": [
+    "Platform Engineering",
+    "Kubernetes",
+    "Cloud Infrastructure",
+    "Distributed Systems",
+    "Engineering Leadership",
+    "Engineering Strategy",
+    "Architecture Governance",
+    "Observability",
+    "AI/ML Platforms",
+    "Data Platforms",
+    "Cost Optimization",
+    "Stakeholder Management"
+  ],
+  "education": [
+    {
+      "institution": "Veermata Jijabai Technological Institute (VJTI)",
+      "area": "Information Technology",
+      "studyType": "Bachelor of Technology",
+      "startDate": "2008-07-01",
+      "endDate": "2012-05-01",
+      "score": "7.2/10.0"
+    }
+  ],
+  "work": [
+    {
+      "name": "HDFC Bank",
+      "position": "Vice President - Platform Engineering (Director-level Role)",
+      "location": "Bengaluru, India",
+      "startDate": "2023-09-01",
+      "highlights": [
+        "Lead platform engineering for Kubernetes-based banking platforms serving 100M+ customers, managing 20+ direct reports and influencing a 250+ engineer organization on a $1-5M annual CAPEX/OPEX budget",
+        "Drove Kubernetes-based, vendor-neutral platform modernization focused on resiliency, disaster recovery, and observability",
+        "Built in-house observability platforms on OpenTelemetry, cutting annual tooling costs from $1.2M to $300K",
+        "Own hiring strategy, workforce planning, performance management, and succession planning for platform engineering teams",
+        "Chair architecture reviews and drive technology governance, risk assessment, and vendor evaluation for regulated banking platforms, ensuring alignment with ISO, SOC, and PCI compliance requirements"
+      ]
+    },
+    {
+      "name": "ForaySoft (Contract to Wayfair)",
+      "position": "Manager, Machine Learning Engineering",
+      "location": "Remote, India",
+      "startDate": "2023-05-01",
+      "endDate": "2023-08-01",
+      "highlights": [
+        "Guided machine learning engineering efforts to modernize data and ML pipelines supporting large-scale retail analytics for a 5M x 1B SKU matching and pricing-intelligence problem, improving model reliability, scalability, and deployment processes"
+      ]
+    },
+    {
+      "name": "PayPal",
+      "position": "Senior Manager, Cybersecurity Engineering",
+      "location": "Bengaluru, India",
+      "startDate": "2019-03-01",
+      "endDate": "2023-04-01",
+      "highlights": [
+        "Managed globally distributed teams across India and the US, delivering an organization-wide Secrets Scanning platform across 50,000+ repositories",
+        "Designed and implemented a Security Data Lake supporting real-time and batch analytics, data curation, and reporting, aligning security architecture and compliance requirements with global stakeholders"
+      ]
+    },
+    {
+      "name": "Walmart Labs",
+      "position": "Senior Software Engineer",
+      "location": "Bengaluru, India",
+      "startDate": "2017-10-01",
+      "endDate": "2019-03-01",
+      "highlights": [
+        "Designed and built high-throughput data pipelines processing 12M+ transactions per day using Apache Spark, Airflow, Cassandra, Python, and Scala, replacing legacy pipelines and improving data reliability"
+      ]
+    },
+    {
+      "name": "Barclays",
+      "position": "Senior Developer, Barclaycard",
+      "location": "Pune, India",
+      "startDate": "2015-03-01",
+      "endDate": "2017-10-01",
+      "highlights": [
+        "Developed enterprise-scale data ingestion and stream processing frameworks for 20M customers using Kafka Connect and Apache Spark"
+      ]
+    },
+    {
+      "name": "Cisco Systems",
+      "position": "Senior Engineer, Sales",
+      "location": "Bengaluru, India",
+      "startDate": "2012-07-01",
+      "endDate": "2015-03-01",
+      "highlights": [
+        "Led migration and performance-tuning initiatives with impact exceeding $13M, and built analytics dashboards supporting $50M+ in transactions for regional sales teams"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Engineering Leadership",
+      "level": "4",
+      "keywords": ["People Management", "Stakeholder Management", "Org Design", "Program Execution", "Budget Ownership"]
+    },
+    {
+      "name": "Platform & Cloud Engineering",
+      "level": "4",
+      "keywords": ["Platform Engineering", "Kubernetes", "Microservices", "Cloud-Native Architecture"]
+    },
+    {
+      "name": "Observability & Reliability",
+      "level": "4",
+      "keywords": ["OpenTelemetry", "Metrics", "Logs", "Traces", "Prometheus", "SRE Practices"]
+    },
+    {
+      "name": "Data & Streaming Systems",
+      "level": "4",
+      "keywords": ["Apache Spark", "Kafka", "SQL", "NoSQL", "BigQuery"]
+    },
+    {
+      "name": "AI / ML Platforms",
+      "level": "3",
+      "keywords": ["Machine Learning Platforms", "ML Pipelines", "Model Deployment", "AI Enablement"]
+    },
+    {
+      "name": "Technical Skills",
+      "keywords": ["Python", "Java", "Docker", "Kubernetes", "Observability", "Kafka", "Spark", "Prometheus"]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Hackathon Winner (2x)",
+      "awarder": "PayPal, Barclays"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Certified Kubernetes Application Developer (CKAD)",
+      "date": "2021",
+      "issuer": "Linux Foundation"
+    },
+    {
+      "name": "Oracle Certified Professional, Java Programmer",
+      "date": "2012",
+      "issuer": "Oracle"
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Professional Proficiency"
+    }
+  ]
+}

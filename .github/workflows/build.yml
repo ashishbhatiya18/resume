@@ -1,0 +1,54 @@
+name: Build Resume
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - "resume.json"
+      - "package.json"
+      - "theme/**"
+      - "scripts/**"
+      - ".github/workflows/build.yml"
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate resume.json against JSON Resume schema
+        run: npx resumed validate resume.json
+
+      - name: Build resume.pdf
+        run: npm run build
+
+      - name: Upload resume.pdf artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume
+          path: resume.pdf
+          if-no-files-found: error
+
+      - name: Publish resume.pdf as a GitHub Release
+        if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: Latest resume build
+          body: Automatically rebuilt from ${{ github.sha }}. This release is overwritten on every push.
+          files: resume.pdf

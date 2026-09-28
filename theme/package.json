@@ -1,0 +1,8 @@
+{
+  "name": "jsonresume-theme-ashish",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Minimal single-page, ATS-friendly JSON Resume theme",
+  "type": "commonjs",
+  "main": "index.js"
+}

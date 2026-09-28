@@ -1,0 +1,16 @@
+{
+  "name": "ashish-resume",
+  "version": "1.0.0",
+  "private": true,
+  "description": "JSON Resume source and build pipeline for Ashish Bhatiya's resume",
+  "scripts": {
+    "build:html": "resumed render resume.json -t jsonresume-theme-ashish -o resume.html",
+    "build:pdf": "node scripts/html-to-pdf.js resume.html resume.pdf",
+    "build": "npm run build:html && npm run build:pdf"
+  },
+  "devDependencies": {
+    "jsonresume-theme-ashish": "file:./theme",
+    "puppeteer": "^25.12.0",
+    "resumed": "^3.0.0"
+  }
+}
